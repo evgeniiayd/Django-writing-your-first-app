@@ -1,4 +1,4 @@
-# ЛР 3-5
+# ЛР 3+4 и ПР (Одно приложение)
 ## Яблонская Евгения, ИВТ-1.2, 4 курс
 
 # Результат ЛР 3:
@@ -23,7 +23,7 @@
 Создание нового вопроса:
 <img width="1243" height="709" alt="image" src="https://github.com/user-attachments/assets/4645f194-ee4f-454a-9fec-3e8c9e72487c" />
 
-# Результат ЛР 5:
+# Результат Практической работы:
 Авторизация через Google:
 
 <img width="872" height="672" alt="image" src="https://github.com/user-attachments/assets/1eb6b344-433e-4720-bffa-76ff349494e6" />
