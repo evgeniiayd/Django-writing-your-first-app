@@ -9,3 +9,7 @@ Django, writing your first app
 
 - Результаты тестирования:
 <img width="861" height="384" alt="image" src="https://github.com/user-attachments/assets/1efb79a8-73b7-4a1d-a5d3-48cbb14138a9" />
+
+Конечный результат:
+<img width="1842" height="555" alt="image" src="https://github.com/user-attachments/assets/976c8db6-9ffe-4ab7-a3d1-7ff847b06433" />
+![Uploading image.png…]()
