@@ -5,6 +5,12 @@ from django.urls import reverse
 from django.views import generic
 from .models import Choice, Question
 from django.utils import timezone
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .forms import QuestionForm
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
@@ -46,3 +52,25 @@ def vote(request, question_id):
         # Всегда возвращайте HttpResponseRedirect после успешной обработки POST данных.
         # Это предотвращает повторную отправку данных, если пользователь нажал кнопку "Назад".
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+@login_required
+def create_poll(request):
+    if request.method == 'POST':
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('polls:index')  # Переадресация на список опросов
+    else:
+        form = QuestionForm()
+    return render(request, 'polls/create_poll.html', {'form': form})
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('polls:index')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})

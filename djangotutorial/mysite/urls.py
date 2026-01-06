@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import include, path  # Добавляем импорт include
 
 urlpatterns = [
-    path("polls/", include("polls.urls")),  # Включаем маршруты из polls.urls
     path("admin/", admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('polls.urls')),
 ]
 

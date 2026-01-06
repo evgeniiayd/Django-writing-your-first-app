@@ -1,0 +1,7 @@
+<h2>Создать новый опрос</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Создать опрос</button>
+</form>
+<a href="{% url 'polls:index' %}">Вернуться к опросам</a>
